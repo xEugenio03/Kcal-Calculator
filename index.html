@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>My Diet Calculator</title>
+    </head>
+    <body>
+        <div id="header">
+            <h1>FitHealth360</h1>
+            <div class="language">
+                <img src="img/united-kingdom_555417.png" class="flag"></img>
+                <div class="scelta_lingua">
+                    <ul>
+                    <li><img src="img/united-kingdom_555417.png" class="flag_scelta" id="eng"></img></li>
+                    <li><img src="img/italy_3373278.png" class="flag_scelta" id="ita"></img></li>
+                    </ul>
+                </div>
+            </div>
+           
+        </div>
+        <div class="content">
+            <div class="header">
+                <h1 id="h1_1">Kcal & Macro</h1>
+                <h1 id="h1_2">Calculator</h1>
+                <br>
+                <!-- <p class="header_p">Select what do you want to calculate</p>
+                <hr>
+                <br>
+                <div class="buttons_header">
+                    <button>Basal Metabolism Calculator</button>
+                    <button>Daily Kcals Intake Calculator</button>
+                    <button>Macros Calculator <br>(pro carb fat)</button>
+                </div> -->
+                <p class="header_p">What we calculate:</p>
+                <hr>
+                <ul class="ul_header">
+                    <li>Basal metabolism (BMR).</li>
+                    <li>Daily calories intake (TDEE).</li>
+                    <li>Daily Macronutrients Ratios.</li>
+                </ul>
+                <p>Based on your weight goals.</p>
+            </div>
+            <div class="body">
+                <hr>
+                <!-- <h3>Daily Kcals Intake Calculator</h3> -->
+                <div class="input" id="input_sex">
+                    <h3>What is your sex?</h3>
+                    <div class="input_div">
+                        <img src="img/PikPng.com_worker-png_1296396.png" alt="man_icon">
+                        <button class="input_button" id="male" value="1.5">Male</button>
+                    </div>
+                    <div class="input_div">
+                        <img src="img/PikPng.com_worker-png_1296599.png" alt="female_icon">
+                        <button class="input_button" id="female" value="1.2">Female</button>
+                    </div>
+                </div>
+                <!-- <hr> -->
+                <div class="input" id="input_age">
+                    <h3>How old are you?</h3>
+                    <div class="input_data">
+                        <input class="age" id="eta" type="number" min="0" max="99" placeholder="20">
+                        <p>Years</p>
+                    </div>
+                </div>
+                <!-- <hr> -->
+                <div class="input" id="input_height">
+                    <div class="input_2">
+                        <h3>How tall are you?</h3>
+                        <div class="input_data" id="altezza_div">
+                            
+                            <!-- cm -->
+                            <input class="height" id="altezza" type="number" min="30" max="302" placeholder="180">
+                            <p>cm</p>
+                           
+                            <!-- feet -->
+                            <!-- <input class="feet" id="altezza_feet" type="number" min="1" max="9" placeholder="5">
+                            <p class="feet_p">feet</p> 
+                            <input class="inch" id="altezza_inch" type="number" min="0" max="11" placeholder="10">
+                            <p>inch</p> -->
+                        </div>
+                    </div>
+                    <div class="input_3" >
+                        <div class="input_div">
+                            <button class="input_button  button_active" id="cm">cm</button>
+                        </div>
+                        <div class="input_div">
+                            <button class="input_button" id="feet">feet</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- <hr> -->
+                <div class="input" id="input_weight">
+                    <div class="input_2">
+                        <h3>How much do you weigh?</h3>
+                        <div class="input_data" id="peso_div">
+                            <!-- kg -->
+                            <input class="height" id="peso" type="number" min="0" max="272" placeholder="70">
+                            <p>kg</p>
+
+                            <!-- lb -->
+                            <!-- <input class="height" id="peso_lb" type="number" min="0" max="600" placeholder="154">
+                            <p>lb</p> -->
+                        </div>
+                    </div>
+                    <div class="input_3">
+                        <div class="input_div">
+                            <button class="input_button  button_active" id="kg">kg</button>
+                        </div>
+                        <div class="input_div">
+                            <button class="input_button" id="lb">lb</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- <hr> -->
+                <div class="input facoltativo" id="input_fat">
+                    <div class="input_2">
+                        <h3>What is your body fat?</h3>
+                        <div class="input_data" id="fat_div">
+
+                            <!-- % -->
+                            <b>*not obligatory</b>
+                            <input class="age" type="number" min="0" max="150" placeholder="15" id="fat">
+                            <p>%</p>
+
+                            <!-- kg -->
+                            <!-- <b>*not obligatory</b>
+                            <input class="height" id="fat_kg" type="number" min="0" max="272" placeholder="70">
+                            <p>kg</p> -->
+
+                            <!-- lb -->
+                            <!-- <b>*not obligatory</b>
+                            <input class="height" id="fat_lb" type="number" min="0" max="600" placeholder="154">
+                            <p>lb</p> -->
+
+                        </div>
+                    </div>
+                    <div class="input_3">
+                        <div class="input_div">
+                            <button class="input_button  button_active" id="fat-percent">%</button>
+                        </div>
+                        <div class="input_div">
+                            <button class="input_button" id="fat-kg">kg</button>
+                        </div>
+                        <div class="input_div">
+                            <button class="input_button" id="fat-lbs">lbs</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- <hr> -->
+                <div class="input" id="input_activity">
+                    <div class="input_2">
+                        <h3>How active are you on daily basis?</h3>
+                    </div>
+                    <div class="input_4">
+                        <div class="input_div2">
+                            <p class="n_active_ratio">1)</p>
+                            <button class="input_button" id="active1" value="1.2">Sedentary</button>
+                            <p class="info_active_ratio">Little or no physical activity.</p>
+                        </div>
+                        <div class="input_div2">
+                            <p class="n_active_ratio">2)</p>
+                            <button class="input_button" id="active2" value="1.375">Lightly active</button>
+                            <p class="info_active_ratio">Light exercise/sports 1-3 days a week.</p>
+                        </div>
+                        <div class="input_div2">
+                            <p class="n_active_ratio">3)</p>
+                            <button class="input_button" id="active3" value="1.55">Moderately active</button>
+                            <p class="info_active_ratio">Moderate exercise/sports 3-5 days a week.</p>
+                        </div>
+                        <div class="input_div2">
+                            <p class="n_active_ratio">4)</p>
+                            <button class="input_button" id="active4" value="1.725">Very active</button>
+                            <p class="info_active_ratio">Hard exercise/sports 6-7 days a week.</p>
+                        </div>
+                        <div class="input_div2">
+                            <p class="n_active_ratio">5)</p>
+                            <button class="input_button" id="active5" value="1.9">Extremely active</button>
+                            <p class="info_active_ratio">Physical job, or intense exercise 2x a day.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="submit_div">
+                    <button id="invio">Calculate</button>
+                </div>
+                <div id="result_head">
+                    <!-- <hr>
+                    <div class="bmr">
+                        <button class="bmr_button result_selected">Basal Metablism Rate (BMR)</button>
+                    </div>
+                    <div class="obiettivo_peso ">
+                        <button class="obiettivo" id="lw">Lose Weight</button>
+                        <button class="obiettivo" id="mw">Mantein Weight</button>
+                        <button class="obiettivo" id="gw">Gain Weight</button>
+                    </div> -->
+                </div>
+                <div id="result_body">
+                    <!-- <h3 id="result_kcal">To Lose Weight: kcal</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Macro</th>
+                                <th>Ratio</th>
+                                <th>Grams</th>
+                                <th>kcal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td_left">Fats:</td>
+                                <td id="tb_fat_percent">%</td>
+                                <td id="tb_fat_g">g</td>
+                                <td id="tb_fat_kcal">kcal</td>
+                            </tr>
+                            <tr>
+                                <td class="td_left">Proteins:</td>
+                                <td id="tb_pro_percent">%</td>
+                                <td id="tb_pro_g">g</td>
+                                <td id="tb_pro_kcal">kcal</td>
+                            </tr>
+                            <tr>
+                                <td class="td_left">Carbohydrates:</td>
+                                <td id="tb_carb_percent">%</td>
+                                <td id="tb_carb_g">g</td>
+                                <td id="tb_carb_kcal">kcal</td>
+                            </tr>
+                        </tbody>
+                    </table> -->
+                </div>
+                <hr>
+
+                <div class="info">
+                    <p>BMR (Basal Metabolic Rate): is the number of calories your body needs for basic functions at rest.</p>
+                    <p>BMR: is calculate on the base of Mifflin-St Jeor Equation and  Katch-McArdle Equation.</p>
+                    <p>TDEE (Total Daily Energy Expenditure): is the number of calories your body needs for all the activities you do during the day.</p>
+                    <p>TDEE: is calculate with your Basal Metabolic Rate (BMR) and your level of physical activity.</p>
+                    <p>MACRONUTRIENTS: are the nutrients that our bodies require in large amounts to function properly and provide the energy needed for growth, metabolism, and overall health. The three primary macronutrients are carbohydrates, proteins, and fats.</p>
+                    <p>MACRONUTRIENTS RATIOS: help tailor your diet to meet specific health and fitness goals. Adjusting the ratio can influence how your body uses energy, builds muscle, and stores fat.</p>
+                    <p>Why BODY FAT is NOT OBLIGATORY: Knowing the body fat is helpful to get more accurate results but if your are not sure about it, is preferable to leave the field blank.</p>
+
+
+                </div>
+
+            </div>
+            
+
+
+            
+
+            
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
