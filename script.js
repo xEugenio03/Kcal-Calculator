@@ -56,11 +56,11 @@ let error=false;
 
 //lang
 ita.addEventListener("click", ()=>{
-    window.location.href = "https://www.example.com";
+    window.location.href = "http://127.0.0.1:5500/index.html";
 });
 
 eng.addEventListener("click", ()=>{
-    window.location.href = "https://www.example.com";
+    window.location.href = "http://127.0.0.1:5500/index.html";
 });
 
 // sex
