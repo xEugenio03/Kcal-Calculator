@@ -482,12 +482,12 @@ function crea_risultato(){
     div_risultato_head=`
                         <hr>
                         <div class="bmr">
-                            <button class="bmr_button result_selected" id="base">Basal Metablism Rate (BMR)</button>
+                            <button class="bmr_button result_selected" id="base">Metabolismo Basale (BMR)</button>
                         </div>
                         <div class="obiettivo_peso ">
-                            <button class="obiettivo" id="lw">Lose Weight</button>
-                            <button class="obiettivo" id="mw">Mantein Weight</button>
-                            <button class="obiettivo" id="gw">Gain Weight</button>
+                            <button class="obiettivo" id="lw">Perdere Peso</button>
+                            <button class="obiettivo" id="mw">Mantere il Peso</button>
+                            <button class="obiettivo" id="gw">Prendere Peso</button>
                         </div>`;
 
 
@@ -497,26 +497,26 @@ function crea_risultato(){
                             <thead>
                                 <tr>
                                     <th>Macro</th>
-                                    <th>Ratio</th>
-                                    <th>Grams</th>
+                                    <th>Rapporto</th>
+                                    <th>Grammi</th>
                                     <th>kcal</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="td_left">Fats:</td>
+                                    <td class="td_left">Grassi:</td>
                                     <td id="tb_fat_percent">%</td>
                                     <td id="tb_fat_g">g</td>
                                     <td id="tb_fat_kcal">kcal</td>
                                 </tr>
                                 <tr>
-                                    <td class="td_left">Proteins:</td>
+                                    <td class="td_left">Proteine:</td>
                                     <td id="tb_pro_percent">%</td>
                                     <td id="tb_pro_g">g</td>
                                     <td id="tb_pro_kcal">kcal</td>
                                 </tr>
                                 <tr>
-                                    <td class="td_left">Carbohydrates:</td>
+                                    <td class="td_left">Carboidrati:</td>
                                     <td id="tb_carb_percent">%</td>
                                     <td id="tb_carb_g">g</td>
                                     <td id="tb_carb_kcal">kcal</td>
@@ -646,7 +646,6 @@ function calcola_basale(){
 
 }
 
-
 function calcola_lw(){
     if(active==0)
     {
@@ -674,7 +673,7 @@ function calcola_lw(){
     let kcal_lw=kcal_daily-400;
     console.log(kcal_lw);
     
-    result_kcal.innerText="To Lose Weight: "+kcal_lw+"kcal";
+    result_kcal.innerText="Per perdere peso: "+kcal_lw+"kcal";
 
     kcal_fats=(percent_fats_lw/100)*kcal_lw;
     kcal_fats=Number(kcal_fats.toFixed(0));
@@ -748,7 +747,7 @@ function calcola_mw(){
     console.log(kcal_daily);
 
 
-    result_kcal.innerText="To Maintain Weight: "+kcal_daily+"kcal";
+    result_kcal.innerText="Per mantenere il peso: "+kcal_daily+"kcal";
 
     kcal_fats=(percent_fats_mw/100)*kcal_daily;
     console.log("fat kcal"+kcal_fats);
@@ -831,7 +830,7 @@ function calcola_gw(){
     let kcal_gw=kcal_daily+400;
     console.log(kcal_gw);
     
-    result_kcal.innerText="To Lose Weight: "+kcal_gw+"kcal";
+    result_kcal.innerText="Per prendere peso: "+kcal_gw+"kcal";
 
     kcal_fats=(percent_fats_gw/100)*kcal_gw;
     kcal_fats=Number(kcal_fats.toFixed(0));

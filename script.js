@@ -831,7 +831,7 @@ function calcola_gw(){
     let kcal_gw=kcal_daily+400;
     console.log(kcal_gw);
     
-    result_kcal.innerText="To Lose Weight: "+kcal_gw+"kcal";
+    result_kcal.innerText="To Gain Weight: "+kcal_gw+"kcal";
 
     kcal_fats=(percent_fats_gw/100)*kcal_gw;
     kcal_fats=Number(kcal_fats.toFixed(0));
