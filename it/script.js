@@ -485,9 +485,9 @@ function crea_risultato(){
                             <button class="bmr_button result_selected" id="base">Metabolismo Basale (BMR)</button>
                         </div>
                         <div class="obiettivo_peso ">
-                            <button class="obiettivo" id="lw">Lose Weight</button>
-                            <button class="obiettivo" id="mw">Mantein Weight</button>
-                            <button class="obiettivo" id="gw">Gain Weight</button>
+                            <button class="obiettivo" id="lw">Perdere Peso</button>
+                            <button class="obiettivo" id="mw">Mantere il Peso</button>
+                            <button class="obiettivo" id="gw">Prendere Peso</button>
                         </div>`;
 
 
@@ -646,8 +646,7 @@ function calcola_basale(){
 
 }
 
-
-function calcola_lw(){
+{
     if(active==0)
     {
         input_activity.classList.add("activity_warning");
