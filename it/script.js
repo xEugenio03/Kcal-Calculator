@@ -646,7 +646,7 @@ function calcola_basale(){
 
 }
 
-{
+function calcola_lw(){
     if(active==0)
     {
         input_activity.classList.add("activity_warning");
